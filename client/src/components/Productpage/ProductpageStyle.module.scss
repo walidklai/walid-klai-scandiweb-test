@@ -1,0 +1,119 @@
+@import "../../assets/variables.scss";
+
+.product_page {
+  margin-top: 93px;
+  height: calc(100vh - 93px - 80px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width:1280px){
+       justify-content: center;
+  }
+}
+
+.carousel_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  margin-right: 1%;
+}
+
+.carousel_selected_img {
+  max-width: 700px;
+  max-height: 477px;
+  height: auto;
+  width: max-content;
+  margin: 0 auto;
+  @media screen and (max-width: 850px) {
+    width: unset;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.carousel_images {
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 88px;
+    height: 88px;
+    cursor: pointer;
+    margin: 2px 5px;
+    transition: outline 150ms ease;
+    &:hover {
+      outline: 4px solid $secondary;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: row;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.focus_img {
+  outline: 4px solid $secondary;
+}
+
+.product_info {
+  margin-right: auto;
+  max-width: 400px;
+  @media screen and (max-width:1280px){
+    margin-right: unset;
+}
+@media screen and (max-width: 689px) {
+  width: 100%;
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  >.btn_add_to_cart{
+    width: 90%;
+  }
+}
+}
+
+.product_info_name {
+  font-weight: $font_weight_thick;
+  font-size: 30px;
+}
+.product_info_brand {
+  font-weight: $font_weight_thin;
+  margin-bottom: 35px;
+}
+
+.product_info_price {
+  span {
+    font-weight: $font_weight_thick;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  div {
+    font-size: 24px;
+    font-weight: $font_weight_thick;
+    margin-bottom: 20px;
+  }
+}
+
+.btn_add_to_cart {
+  padding: 16px 0;
+  margin-bottom: 40px;
+}
+
+.html_from_be{
+    font-size: 16px;
+}
+
+.btn_added_to_cart{
+    pointer-events: none;
+    opacity: 0.7;
+}

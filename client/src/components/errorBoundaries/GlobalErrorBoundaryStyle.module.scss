@@ -1,0 +1,21 @@
+@import "../../assets/variables.scss";
+
+.error_boundary {
+  width: 100vw;
+  height: 100vh;
+  h1{
+    color: $primary;
+  }
+
+  background-color: $secondary;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_error_boundary {
+  width: max-content;
+  padding: 12px;
+  margin: 0 auto;
+}

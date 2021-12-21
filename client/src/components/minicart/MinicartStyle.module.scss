@@ -1,0 +1,90 @@
+@import "../../assets/variables.scss";
+
+.mini_cart {
+  width: 325px;
+  max-height: 540px;
+  background-color: $primary;
+  position: fixed;
+  top: 80px;
+  right: 100px;
+  z-index: 1000;
+  overflow-y: auto;
+  padding: 0 16px;
+  animation-name: minicart_anim_in;
+  animation-duration: 150ms;
+  transform-origin: top right;
+  box-shadow: 0px 20px 15px -10px  rgba(128, 128, 128, 0.267);
+  @media screen and (max-width: 1280px) {
+    right: 0;
+  }
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+  @media screen and (max-height: 600px) {
+    max-height: calc(100vh - 80px);
+  }
+}
+
+@keyframes minicart_anim_in{
+  0%{opacity: 0;transform: scale(0);}
+  100%{opacity: 1;transform: scale(1)}
+}
+
+@keyframes minicart_anim_out{
+  0%{opacity: 1;transform: scale(1);}
+  100%{opacity: 0;transform: scale(0);display: none;}
+}
+
+.open {
+  display: initial;
+}
+
+.not_open {
+  display: none;
+}
+
+.not_open_animated{
+  animation-name: minicart_anim_out;
+  animation-duration: 150ms;
+  animation-fill-mode: forwards;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(57, 55, 72, 0.22);
+  z-index: 1000;
+  top: 80px;
+}
+
+.overlay_not_open{
+  display: none;
+}
+
+.btn_group {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.btn_minicart {
+   font-size: 13px;
+  padding: 13px 30px;
+   margin: 20px 0px;
+  display: flex;
+  align-items: center; 
+}
+
+.minicart_price {
+  display: flex;
+  justify-content: space-between;
+  :first-child {
+    font-weight: $font_weight_thick;
+  }
+}
+
+.my_bag_item {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}

@@ -1,0 +1,20 @@
+@import "../../assets/variables.scss";
+
+.cart_page {
+  margin-bottom: 5%;
+}
+
+.cart_page_title {
+  padding: 80px 0 59px 0;
+  font-size: 32px;
+  font-weight: $font_weight_thick;
+  text-transform: uppercase;
+}
+
+.cart_items_container {
+}
+
+hr{
+    opacity: 0.4;
+    margin: 20px 0;
+}

@@ -1,0 +1,135 @@
+@import "../../assets/variables.scss";
+
+.cart_item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &:hover > .trash_icon {
+    pointer-events: initial;
+    opacity: 1;
+  }
+}
+
+.cart_item_mini_cart{
+  margin-bottom: 41px;
+}
+
+.cart_item_cart_page {
+  width: 90%;
+  flex-wrap: wrap;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.trash_icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  bottom: 0;
+  z-index: 1;
+ /*  transition: opacity 150ms ease; */
+}
+
+.cart_item_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart_item_utils {
+  display: flex;
+}
+
+.cart_item_utils_cart_page_mobile{
+  @media screen and (max-width:320px){
+    flex-direction: column-reverse;
+  }
+}
+
+.cart_item_img_mini_cart {
+  width: 105px;
+  height: 137px;
+}
+
+.cart_item_img_cart_page {
+  width: 141px;
+  height: 185px;
+}
+
+.btn_cart_item_mini_cart {
+  width: 24px;
+  height: 24px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.cart_item_info_brand_cart_page{
+  font-size: 30px;
+  font-weight: $font_weight_thick;
+}
+
+.cart_item_info_name_cart_page{
+  font-size: 30px;
+  font-weight: $font_weight_thin;
+  margin-top: 16px;
+  opacity: 0.9;
+}
+
+.cart_item_price{
+  font-weight: $font_weight_thick;
+  margin: 2px 0;
+}
+
+.cart_item_price_cart_page{
+  margin: 12px 0;
+}
+
+.cart_item_info_brand_mini_cart{
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+.cart_item_info_name_mini_cart{
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.cart_item_img_container{
+  line-height: 0;
+  position: relative;
+}
+
+.cart_item_img_left_arrow{
+ cursor:pointer;
+ width: 8%;
+ position: absolute;
+ left: 0;
+ top: 50%;
+ opacity: 0.5;
+  transform: translate(0,-50%);
+}
+.cart_item_img_right_arrow{
+  cursor: pointer;
+  width: 8%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  opacity: 0.5;
+  transform: translate(0,-50%);
+}
+
+.counter_cart_page{
+  @media screen and (max-width:350px){
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+}

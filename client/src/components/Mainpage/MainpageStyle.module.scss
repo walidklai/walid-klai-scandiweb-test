@@ -1,0 +1,21 @@
+
+.main_page{
+    @media screen and (max-width:1280px){
+        text-align: center;
+    }
+}
+
+.cards_container{
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width:1280px){
+        justify-content: center;
+    }
+}
+
+.main_page_title{
+    padding-top: 80px;
+    margin-bottom: 103px;
+    font-size: 42px;
+    font-weight: normal;
+}

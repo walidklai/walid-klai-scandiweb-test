@@ -1,0 +1,72 @@
+@import "../../assets/variables.scss";
+
+.attribute_container{
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.attribute_name{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.attribute_name_product_page{
+    margin: 8px 0;
+}
+
+.attribute{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:$atrribute_font_size_big;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid $dark;
+}
+
+.attribute_text_mini_cart{
+    border: 1px solid #1d1f2294;
+    width: max-content;
+    padding: 5px;
+    transition: color 150ms ease, background-color 300ms ease;
+    &:hover{
+        color: $primary;
+        background-color: $dark;
+    }
+}
+
+.attribute_name_mini_cart{
+    font-size: 10px;
+    padding: 2% 0;
+}
+
+.attribute_text{
+    border: 1px solid #1d1f2294;
+    width: 63px;
+    height: 45px;
+    transition: color 150ms ease, background-color 300ms ease;
+    &:hover{
+        color: $primary;
+        background-color: $dark;
+    }
+}
+
+.attribute_text_selected{
+    color: $primary;
+    background-color: $dark;
+}
+
+.attribute_swatch{
+    padding: 10px;
+    border-radius: 50%;
+    transition: outline 150ms ease;
+    border: 1px solid #1d1f2294;
+    &:hover{
+        outline: 4px solid $secondary;
+    }
+}
+
+.attribute_swatch_selected{
+    outline: 4px solid $secondary;
+}

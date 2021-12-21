@@ -1,0 +1,32 @@
+@import "../../assets/variables.scss";
+
+.btn{
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn_primary{
+    outline: 1px solid $dark;
+    outline-offset: -2px;
+    background-color: $primary;
+    transition: outline-offset 150ms ease;
+    &:hover{
+        outline-offset: -4px;
+    }
+}
+
+.btn_secondary{
+    background-color: $secondary;
+    color: $primary;
+    outline: 1px solid $primary;
+    transition: outline-offset 150ms ease;
+    &:hover{
+        outline-offset: -4px;
+    }
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+    background-color: tomato;
+}

@@ -1,0 +1,79 @@
+@import "../../assets/variables.scss";
+
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(57, 55, 72, 0.22);
+  top: 0;
+  left: 0;
+}
+
+.filter {
+  position: fixed;
+  width: 60vw;
+  height: 100vh;
+  background-color: $primary;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 5%;
+  animation-name: filter_anim_in;
+  animation-duration: 150ms;
+  transform-origin: left top;
+  box-shadow: 0px 10px 15px 1px  rgba(128, 128, 128, 0.267);
+}
+
+.filter_not_open{
+    display: none;
+}
+
+.filter_not_open_animated{
+    animation-name: filter_anim_out;
+    animation-duration: 150ms;
+    animation-fill-mode: forwards;
+}
+
+.overlay_not_open{
+    display: none;
+}
+
+@keyframes filter_anim_in{
+    0%{opacity: 0;transform: translate(-60vw) scale(0);}
+    100%{opacity: 1;transform:  translate(0vw) scale(1)}
+  }
+  
+  @keyframes filter_anim_out{
+    0%{opacity: 1;transform: scale(1);}
+    100%{opacity: 0;transform: scale(0);display: none;}
+  }
+
+.filter_header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        width: 25px;
+        cursor:pointer;
+    }
+}
+
+.filter_title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: $font_weight_thick;
+}
+
+.filter_category {
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 5% 0 5% 5%;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.filter_category_selected{
+    color: $secondary;
+}

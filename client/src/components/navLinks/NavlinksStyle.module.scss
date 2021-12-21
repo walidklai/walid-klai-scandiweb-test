@@ -1,0 +1,56 @@
+@import "../../assets/variables.scss";
+
+.nav_links {
+  display: flex;
+  list-style-type: none;
+}
+
+.selected_nav_link {
+  color: $secondary;
+
+  &::after {
+    pointer-events: none;
+    content: " ";
+    position: absolute;
+    left: -20%;
+    top: 272%;
+    width: 140%;
+    height: 2px;
+    background-color: $secondary;
+    opacity: 1 !important;
+  }
+}
+
+.nav_item {
+  cursor: pointer;
+  position: relative;
+  margin: 0 20px;
+  font-weight: 400;
+  transition: color 150ms ease;
+  &:hover {
+    color: $secondary;
+    &::after {
+      opacity: 1;
+    }
+    &:active {
+      color: $dark;
+    }
+  }
+  &::after {
+    pointer-events: none;
+    content: " ";
+    position: absolute;
+    left: -20%;
+    top: 272%;
+    width: 140%;
+    height: 2px;
+    background-color: $secondary;
+    opacity: 0;
+  }
+}
+
+.btn_filter {
+  width: max-content;
+  font-size: 13px;
+  padding: 13px 24px;
+}
